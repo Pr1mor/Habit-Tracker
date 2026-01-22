@@ -23,9 +23,9 @@ export default function App() {
 		<>
 			<h1>Welcome to Habit Tracker</h1>
 			<div className="habitForm">
-				<h3>Create a new Habit!</h3>
+				<h2>Create a new Habit!</h2>
 				<CreateForm onAddHabit={handleAddHabit} />
-				<ul>{habitItems}</ul>
+				<ul className="habitList">{habitItems}</ul>
 			</div>
 		</>
 	);
