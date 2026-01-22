@@ -4,3 +4,15 @@
 	box-sizing: border-box;
 	font-family: Helvetica, sans-serif;
 }
+
+body {
+	background-color: #d5c6e0;
+	font-family:
+		system-ui,
+		-apple-system,
+		Segoe UI,
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif;
+}

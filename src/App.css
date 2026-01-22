@@ -1,0 +1,33 @@
+h1,
+h3 {
+	text-align: center;
+	margin: 20px;
+	color: #192a51;
+}
+
+.habitForm {
+	max-width: fit-content;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	background-color: #192a51;
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	gap: 10px;
+	margin: 10px;
+	color: whitesmoke;
+}
+
+#inputForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 30px;
+}

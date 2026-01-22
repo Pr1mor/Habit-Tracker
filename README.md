@@ -10,5 +10,6 @@ This is a simple habit tracker, that let's you track your goals and progress. My
 
 ## To Do
 
-1. Making habits as objects, right now habits are simple string literal so you can add it easily but cannot do anything with it
-2. Making the habitItems buttons, so that user can click on it and see information regarding that habit
+1. Making the habitItems buttons, so that user can click on it and see information regarding that habit
+2. Adding other features has marking habits complete (so it increased the counter), deleting habits
+3. More CSS

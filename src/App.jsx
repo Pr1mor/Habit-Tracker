@@ -12,9 +12,9 @@ export default function App() {
 	const habitItems = habits.map((habit) => {
 		return (
 			<li key={habit.id}>
-				<div>{habit.name}</div>
-				<div>{habit.createdAt.toLocaleDateString()}</div>
-				<div>{habit.completedDates.length}</div>
+				<div>Habit Name: {habit.name}</div>
+				<div>Created On: {habit.createdAt.toLocaleDateString()}</div>
+				<div>Completed {habit.completedDates.length} times</div>
 			</li>
 		);
 	});
@@ -25,7 +25,7 @@ export default function App() {
 			<div className="habitForm">
 				<h3>Create a new Habit!</h3>
 				<CreateForm onAddHabit={handleAddHabit} />
-				<ol>{habitItems}</ol>
+				<ul>{habitItems}</ul>
 			</div>
 		</>
 	);
@@ -51,7 +51,7 @@ function CreateForm({ onAddHabit }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form id="inputForm" onSubmit={handleSubmit}>
 			<label htmlFor="createHabitName">Habit Name</label>
 			<br />
 			<input
