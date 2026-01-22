@@ -10,6 +10,6 @@ This is a simple habit tracker, that let's you track your goals and progress. My
 
 ## To Do
 
-1. Making the habitItems buttons, so that user can click on it and see information regarding that habit
-2. Adding other features has marking habits complete (so it increased the counter), deleting habits
-3. More CSS
+1. Add delete functionality in the list item
+2. Add a completed today button, once that is done change the completed 'X' times with Streak:
+3. Once you have the basic functionality, redesign the card so that when use clicks on a habit if expands that habit and user can view more information (e.g dates when completed, edit the name, delete, done today) {This is a big feature and redesign}

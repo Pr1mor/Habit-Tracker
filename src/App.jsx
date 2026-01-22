@@ -6,7 +6,11 @@ export default function App() {
 
 	function handleAddHabit(nextHabit) {
 		setHabits((prev) => [...prev, nextHabit]);
-		// console.log(habits);
+	}
+
+	function handleDelete(id) {
+		const updatedHabits = habits.filter((habit) => habit.id !== id);
+		setHabits(updatedHabits);
 	}
 
 	const habitItems = habits.map((habit) => {
@@ -15,6 +19,12 @@ export default function App() {
 				<div>Habit Name: {habit.name}</div>
 				<div>Created On: {habit.createdAt.toLocaleDateString()}</div>
 				<div>Completed {habit.completedDates.length} times</div>
+				<button
+					className="delete-habit-button"
+					onClick={() => handleDelete(habit.id)}
+				>
+					Delete Habit
+				</button>
 			</li>
 		);
 	});
