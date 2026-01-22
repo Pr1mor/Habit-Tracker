@@ -6,10 +6,17 @@ export default function App() {
 
 	function handleAddHabit(nextHabit) {
 		setHabits((prev) => [...prev, nextHabit]);
+		// console.log(habits);
 	}
 
 	const habitItems = habits.map((habit) => {
-		return <li key={habit}>{habit}</li>;
+		return (
+			<li key={habit.id}>
+				<div>{habit.name}</div>
+				<div>{habit.createdAt.toLocaleDateString()}</div>
+				<div>{habit.completedDates.length}</div>
+			</li>
+		);
 	});
 
 	return (
@@ -32,7 +39,14 @@ function CreateForm({ onAddHabit }) {
 		const trimmed = habitName.trim();
 		if (!trimmed) return;
 
-		onAddHabit(trimmed); // performed basic validation before sending to the parent component to add into the habits array
+		let habit = {
+			id: crypto.randomUUID(),
+			name: trimmed,
+			createdAt: new Date(),
+			completedDates: [],
+		};
+
+		onAddHabit(habit); // performed basic validation before sending to the parent component to add into the habits array
 		setHabitName(""); // making it empty once again
 	}
 
